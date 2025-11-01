@@ -1,25 +1,37 @@
-import { createRoot } from 'react-dom/client'
-import { StrictMode } from 'react'
-import './index.css'
-import App from './App.jsx'
-import Page from './pages/Page.jsx'
+import { createRoot } from "react-dom/client";
+import Page from "./pages/Page.jsx";
+import "./index.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    {/* <App /> */}
-    <Page/>
-  </StrictMode>,
-)
+function Img() {
+  return <img src="vite.svg" alt="React Logo" width={40} />;
+}
 
+function Header() {
+  return (
+    <header className="navbar">
+      <Img />
+      <nav>
+        <ul className="nav-list">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
 
-//  in se we achieve our goal by doing these steps 
+function Footer() {
+  return <footer>© {new Date().getFullYear()} Learning new things</footer>;
+}
 
-// 1. create root -> get the root element from html {document.getElemntById('root)}
-// 2. use render() method on selected root inside it define the lement u need  to render 
-// 3. thats it for now 
+const root = createRoot(document.getElementById("root"));
 
-// const h1Element = document.createElement('h1')
-// h1Element.className ='header'
-// h1Element.textContent = 'React is Great!'
-// document.querySelector("#root").appendChild(h1Element)
+root.render(
+  <>
+    <Header />
+    <Page />
 
+    <Footer />
+  </>
+);
