@@ -21,8 +21,10 @@ h1 {
 footer {
   border-top: 1px solid #000;
   margin-top: 3rem;
-  padding: 3;
+  padding: 3rem;
   text-align: center;
+  margin: auto;
+
 }
 
 .nav-list {
