@@ -1,12 +1,15 @@
-import { Facts } from './components/Facts'
+import { Navbar } from "./components/Navbar"
+
+import Main from "./components/Content"
+
 
 function App() {
 
   return (
     <>
-      <h1>Why i'm here learning react?</h1>
 
-      <Facts/>
+    <Navbar/>
+    <Main/>
     </>
   )
 }
