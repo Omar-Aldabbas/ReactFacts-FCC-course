@@ -2,10 +2,12 @@ import { createRoot } from 'react-dom/client'
 import { StrictMode } from 'react'
 import './index.css'
 import App from './App.jsx'
+import Page from './pages/Page.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    {/* <App /> */}
+    <Page/>
   </StrictMode>,
 )
 
@@ -20,3 +22,4 @@ createRoot(document.getElementById('root')).render(
 // h1Element.className ='header'
 // h1Element.textContent = 'React is Great!'
 // document.querySelector("#root").appendChild(h1Element)
+
